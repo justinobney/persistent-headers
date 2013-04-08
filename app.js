@@ -10,7 +10,7 @@ function UpdateTableHeaders() {
            scrollTop      = $(window).scrollTop(),
            floatingHeader = $(".floatingHeader", this);
 
-       if ((scrollTop > offset.top - 45) && (scrollTop < offset.top + el.height())) {
+       if ((scrollTop > offset.top - 40) && (scrollTop < offset.top + el.height())) {
            floatingHeader.css({
             "visibility": "visible"
            });
