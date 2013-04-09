@@ -8,9 +8,11 @@ function UpdateTableHeaders() {
        var el             = $(this),
            offset         = el.offset(),
            scrollTop      = $(window).scrollTop(),
-           floatingHeader = $(".floatingHeader", this);
+           floatingHeader = $(".floatingHeader", this),
+           shiftDistance  = 40;
 
-       if ((scrollTop > offset.top - 40) && (scrollTop < offset.top + el.height())) {
+
+       if ((scrollTop > offset.top - shiftDistance) && (scrollTop  + shiftDistance < offset.top + el.height())) {
            floatingHeader.css({
             "visibility": "visible"
            });
